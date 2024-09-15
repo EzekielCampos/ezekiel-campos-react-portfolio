@@ -12,7 +12,7 @@ export const Bio = () => {
       sx={{
         minHeight: "100vh",
         paddingTop: "50px", // Padding around content
-        paddingBottom: "150px", // Adjust this value to ensure there's space for the footer
+        paddingBottom: "200px", // Adjust this value to ensure there's space for the footer
       }}
     >
       <Grid
