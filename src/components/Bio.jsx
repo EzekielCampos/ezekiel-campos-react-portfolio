@@ -1,4 +1,5 @@
-import { Grid2 as Grid, Typography } from "@mui/material";
+import { Grid2 as Grid, Typography, Avatar } from "@mui/material";
+import portrait from "../assets/img/profile.jpg";
 
 export const Bio = () => {
   return (
@@ -13,25 +14,11 @@ export const Bio = () => {
 }}
       
     >
-      <Grid size={{ xs: 12, md: 7}}>
-        <Typography variant="h3" component="h1" gutterBottom>
-          Ezekiel Campos
-        </Typography>
-        <Typography variant="h6" component="h2" gutterBottom>
-          Full-Stack Developer
-        </Typography>
-        <Typography variant="body1">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-          vehicula urna eu nunc consequat, a pretium lectus posuere. Integer
-          eget magna nec sapien varius laoreet.
-        </Typography>
-        <Typography variant="body1">
-          Phasellus id justo nec libero viverra dignissim. Donec vehicula est at
-          dictum congue. Nulla facilisi. Mauris tristique gravida libero, sit
-          amet cursus lectus pretium a.
-        </Typography>
+      <Grid size={{ xs: 12, md: 5}}>
+      <Avatar alt="Ezekiel Campos" src={portrait}  sx={{ width: 400, height: 400}} />
+     
       </Grid>
-      <Grid size={{ xs: 12, md: 5 }}>
+      <Grid size={{ xs: 12, md: 7 }}>
         <Typography variant="h3" component="h1" gutterBottom>
           Ezekiel Campos
         </Typography>
