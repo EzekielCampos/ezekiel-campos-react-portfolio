@@ -6,8 +6,8 @@ import {
   Grid2 as Grid,
 } from "@mui/material";
 // import RestoreIcon from "@mui/icons-material/Restore";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
+// import FavoriteIcon from "@mui/icons-material/Favorite";
+// import LocationOnIcon from "@mui/icons-material/LocationOn";
 import githubIcon from "../assets/github-mark.svg";
 export const Footer = () => {
   const [value, setValue] = React.useState(0);
@@ -16,15 +16,15 @@ export const Footer = () => {
   };
 
   return (
-    <Grid container>
+    <Grid container >
       <Box
         sx={{
-          width: "100%",
-          border: "solid, 1px, black",
+            height:"100%",
+          width: "150%",
           marginTop: "100%",
-          padding: "15px",
+          padding: "8px",
           background: "linear-gradient(90deg, #f5f7fa, #c3cfe2)",
-          color: "#333",
+    
         }}
       >
         <BottomNavigation
@@ -35,18 +35,18 @@ export const Footer = () => {
           }}
         >
           <BottomNavigationAction
-            label="Recents"
+            label="GitHub"
             icon={
               <img
                 src={githubIcon}
                 alt="GitHub Icon"
-                style={{ width: 24, height: 24 }}
+                style={{ width: 35, height: 35 }}
                 onClick={handleGitHubClick}
               />
             }
           />
-          <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
-          <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} />
+          {/* <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
+          <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} /> */}
         </BottomNavigation>
       </Box>
     </Grid>
