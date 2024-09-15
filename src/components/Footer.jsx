@@ -8,6 +8,7 @@ import {
 // import RestoreIcon from "@mui/icons-material/Restore";
 // import FavoriteIcon from "@mui/icons-material/Favorite";
 // import LocationOnIcon from "@mui/icons-material/LocationOn";
+import HandshakeIcon from "@mui/icons-material/Handshake";
 import githubIcon from "../assets/github-mark.svg";
 export const Footer = () => {
   const [value, setValue] = React.useState(0);
@@ -16,15 +17,14 @@ export const Footer = () => {
   };
 
   return (
-    <Grid container >
+    <Grid container>
       <Box
         sx={{
-            height:"100%",
+          height: "100%",
           width: "150%",
           marginTop: "100%",
           padding: "8px",
           background: "linear-gradient(90deg, #f5f7fa, #c3cfe2)",
-    
         }}
       >
         <BottomNavigation
@@ -45,8 +45,11 @@ export const Footer = () => {
               />
             }
           />
-          {/* <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
-          <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} /> */}
+          {/* {/* <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} /> */}
+          <BottomNavigationAction
+            label="Contact Me"
+            icon={<HandshakeIcon style={{ width: 35, height: 35 }} />}
+          />
         </BottomNavigation>
       </Box>
     </Grid>
