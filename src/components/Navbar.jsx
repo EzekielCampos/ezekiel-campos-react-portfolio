@@ -2,7 +2,6 @@
 import * as React from "react";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
-import Box from "@mui/material/Box";
 import { Grid2 as Grid } from "@mui/material";
 
 export const Nav = () => {
@@ -13,27 +12,48 @@ export const Nav = () => {
   };
 
   return (
-    <Grid>
-      <Box
-        sx={{ width: "100%", bgcolor: "background.paper" }}
-        display="flex"
-        justifyContent="space-between"
-      >
-        <h2>Ezekiel Campos</h2>
-        <Tabs value={value} onChange={handleChange} centered>
-          <Tab
-            value="one"
-            label="Item One"
-            onClick={() => console.log("test")}
-          />
-          <Tab
-            value="two"
-            label="Item Two"
-            onClick={() => console.log("test 2")}
-          />
-          <Tab value="three" label="Item Three" />
-        </Tabs>
-      </Box>
+    <Grid
+      container
+      style={{
+        padding: "25px",
+        background: "linear-gradient(90deg, #f5f7fa, #c3cfe2)",
+        color: "#333",
+      }}
+    >
+      <Grid container size={12} alignItems={"center"} >
+        <Grid size={{ xs: 6, md: 9, sm: 7 }}>
+          <h2
+            style={{
+              fontFamily: "'Playfair Display', sans-serif",
+              fontWeight: 600,
+            }}
+          >
+            Ezekiel Campos
+          </h2>
+        </Grid>
+        <Grid size={{ md: 3, xs: 6, sm: 5 }}>
+          <Tabs value={value} onChange={handleChange}>
+            <Tab
+              value="one"
+              label="About Me"
+              onClick={() => console.log("test")}
+              sx={{ minWidth: 80, padding: "6px 12px", fontSize: "0.850rem" }} // Adjust the size
+            />
+            <Tab
+              value="two"
+              label="My Projects"
+              onClick={() => console.log("test 2")}
+              sx={{ minWidth: 80, padding: "6px 12px", fontSize: "0.850rem" }} // Adjust the size
+            />
+            <Tab
+              value="three"
+              label="Contact Me"
+              onClick={() => console.log("test 3")}
+              sx={{ minWidth: 80, padding: "6px 12px", fontSize: "0.850rem" }} // Adjust the size
+            />
+          </Tabs>
+        </Grid>
+      </Grid>
     </Grid>
   );
 };
