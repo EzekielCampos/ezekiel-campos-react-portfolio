@@ -14,7 +14,6 @@ export const Nav = () => {
     <Grid
       container
       style={{
-       
         width: "100%",
         padding: "20px",
         background: "linear-gradient(90deg, #f5f7fa, #c3cfe2)",
@@ -39,7 +38,6 @@ export const Nav = () => {
               label="About Me"
               onClick={() => console.log("test")}
               sx={{ minWidth: 80, padding: "6px 12px", fontSize: "0.850rem" }} // Adjust the size
-            
             />
             <Tab
               value="two"

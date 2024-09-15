@@ -16,17 +16,52 @@ export const Footer = () => {
   };
 
   return (
-    <Box
+//     <Box
+//     sx={{
+//       position: 'fixed',
+//       bottom: 0,
+//       left: 0,
+//       width: '100%',
+//       background: "linear-gradient(90deg, #f5f7fa, #c3cfe2)",
+//       padding: '8px',
+//       boxShadow: '0 -1px 4px rgba(0,0,0,0.2)',
+//       marginTop: '20px',
+//     }}
+//   >
+//     <BottomNavigation
+//       showLabels
+//       value={value}
+//       onChange={(event, newValue) => {
+//         setValue(newValue);
+//       }}
+//     >
+//       <BottomNavigationAction
+//         label="GitHub"
+//         icon={
+//           <img
+//             src={githubIcon}
+//             alt="GitHub Icon"
+//             style={{ width: 35, height: 35 }}
+//             onClick={handleGitHubClick}
+            
+//           />
+//         }
+//       />
+//       <BottomNavigationAction
+//         label="Contact Me"
+//         icon={<HandshakeIcon style={{ width: 35, height: 35 }} />}
+//       />
+//     </BottomNavigation>
+//   </Box>
+<Box
     sx={{
       position: 'fixed',
       bottom: 0,
       left: 0,
       width: '100%',
-      background: "linear-gradient(90deg, #f5f7fa, #c3cfe2)",
+      background: 'linear-gradient(90deg, #f5f7fa, #c3cfe2)',
       padding: '8px',
       boxShadow: '0 -1px 4px rgba(0,0,0,0.2)',
-      marginTop: '20px',
-    
     }}
   >
     <BottomNavigation
@@ -43,13 +78,26 @@ export const Footer = () => {
             src={githubIcon}
             alt="GitHub Icon"
             style={{ width: 35, height: 35 }}
-            onClick={handleGitHubClick}
+            
           />
         }
+        sx={{
+          '&:hover': {
+            color: 'primary.main', // Change color on hover
+            backgroundColor: 'rgba(0,0,0,0.1)', // Optional: add background color on hover
+          },
+        }}
+        onClick={handleGitHubClick}
       />
       <BottomNavigationAction
         label="Contact Me"
         icon={<HandshakeIcon style={{ width: 35, height: 35 }} />}
+        sx={{
+          '&:hover': {
+            color: 'primary.main', // Change color on hover
+            backgroundColor: 'rgba(0,0,0,0.1)', // Optional: add background color on hover
+          },
+        }}
       />
     </BottomNavigation>
   </Box>
