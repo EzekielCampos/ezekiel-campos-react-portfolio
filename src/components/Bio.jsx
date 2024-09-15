@@ -9,22 +9,36 @@ export const Bio = () => {
       justifyContent="center"
       alignItems="center"
       spacing={2}
-      sx={{ minHeight: "100vh",paddingTop:"80px",// Padding around content
-        paddingBottom: '100px', // Adjust this value to ensure there's space for the footer
-}}
-      
+      sx={{
+        minHeight: "100vh",
+        paddingTop: "50px", // Padding around content
+        paddingBottom: "150px", // Adjust this value to ensure there's space for the footer
+      }}
     >
-      <Grid size={{ xs: 12, md: 5}}>
-      <Avatar alt="Ezekiel Campos" src={portrait}  sx={{ width: 400, height: 400}} />
-     
+      <Grid
+        size={{ xs: 12, md: 5 }}
+        display="flex"
+        justifyContent="center"
+        alignItems={"center"}
+      >
+        <Avatar
+          alt="Ezekiel Campos"
+          src={portrait}
+          sx={{ width: 400, height: 400 }}
+        />
       </Grid>
       <Grid size={{ xs: 12, md: 7 }}>
-        <Typography variant="h3" component="h1" gutterBottom>
-          Ezekiel Campos
-        </Typography>
-        <Typography variant="h6" component="h2" gutterBottom>
-          Full-Stack Developer
-        </Typography>
+        <Grid display="flex" justifyContent="center">
+          <Typography variant="h3" component="h1" gutterBottom>
+            Ezekiel Campos
+          </Typography>
+        </Grid>
+        <Grid display="flex" justifyContent="center">
+          <Typography variant="h6" component="h2" gutterBottom style={{fontWeight:"bold", paddingBottom:"10px"}}>
+            Full-Stack Developer
+          </Typography>
+        </Grid>
+
         <Typography variant="body1">
           Welcome to my portfolio page! My journey in programming began little
           over a year ago when I began learning to code in C/C++. I took a
@@ -38,7 +52,7 @@ export const Bio = () => {
           wants to invest in me so that I can continue to build on my skills as
           a programmer and a leader. Take a look at some of my work below, and
           if you would like to connect wtih me me all my contact information is
-          in the footer.{" "}
+          in the footer.
         </Typography>
       </Grid>
     </Grid>

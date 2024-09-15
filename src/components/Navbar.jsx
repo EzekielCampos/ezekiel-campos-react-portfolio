@@ -14,10 +14,9 @@ export const Nav = () => {
     <Grid
       container
       style={{
-        position: "fixed",
-        top: 0,
+       
         width: "100%",
-        padding: "15px",
+        padding: "20px",
         background: "linear-gradient(90deg, #f5f7fa, #c3cfe2)",
         color: "#333",
       }}
