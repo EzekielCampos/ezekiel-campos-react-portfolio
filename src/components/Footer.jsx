@@ -25,6 +25,8 @@ export const Footer = () => {
       background: "linear-gradient(90deg, #f5f7fa, #c3cfe2)",
       padding: '8px',
       boxShadow: '0 -1px 4px rgba(0,0,0,0.2)',
+      marginTop: '20px',
+    
     }}
   >
     <BottomNavigation

@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import { useState } from "react";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
@@ -41,6 +40,7 @@ export const Nav = () => {
               label="About Me"
               onClick={() => console.log("test")}
               sx={{ minWidth: 80, padding: "6px 12px", fontSize: "0.850rem" }} // Adjust the size
+            
             />
             <Tab
               value="two"
