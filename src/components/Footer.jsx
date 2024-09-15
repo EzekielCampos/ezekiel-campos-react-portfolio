@@ -1,9 +1,8 @@
-import * as React from "react";
+import { useState } from "react";
 import {
   Box,
   BottomNavigation,
   BottomNavigationAction,
-  Grid2 as Grid,
 } from "@mui/material";
 // import RestoreIcon from "@mui/icons-material/Restore";
 // import FavoriteIcon from "@mui/icons-material/Favorite";
@@ -11,47 +10,47 @@ import {
 import HandshakeIcon from "@mui/icons-material/Handshake";
 import githubIcon from "../assets/github-mark.svg";
 export const Footer = () => {
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = useState(0);
   const handleGitHubClick = () => {
     window.location.href = "https://github.com/EzekielCampos"; // Replace with your GitHub URL
   };
 
   return (
-    <Grid container>
-      <Box
-        sx={{
-          height: "100%",
-          width: "150%",
-          marginTop: "100%",
-          padding: "8px",
-          background: "linear-gradient(90deg, #f5f7fa, #c3cfe2)",
-        }}
-      >
-        <BottomNavigation
-          showLabels
-          value={value}
-          onChange={(event, newValue) => {
-            setValue(newValue);
-          }}
-        >
-          <BottomNavigationAction
-            label="GitHub"
-            icon={
-              <img
-                src={githubIcon}
-                alt="GitHub Icon"
-                style={{ width: 35, height: 35 }}
-                onClick={handleGitHubClick}
-              />
-            }
+    <Box
+    sx={{
+      position: 'fixed',
+      bottom: 0,
+      left: 0,
+      width: '100%',
+      background: "linear-gradient(90deg, #f5f7fa, #c3cfe2)",
+      padding: '8px',
+      boxShadow: '0 -1px 4px rgba(0,0,0,0.2)',
+    }}
+  >
+    <BottomNavigation
+      showLabels
+      value={value}
+      onChange={(event, newValue) => {
+        setValue(newValue);
+      }}
+    >
+      <BottomNavigationAction
+        label="GitHub"
+        icon={
+          <img
+            src={githubIcon}
+            alt="GitHub Icon"
+            style={{ width: 35, height: 35 }}
+            onClick={handleGitHubClick}
           />
-          {/* {/* <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} /> */}
-          <BottomNavigationAction
-            label="Contact Me"
-            icon={<HandshakeIcon style={{ width: 35, height: 35 }} />}
-          />
-        </BottomNavigation>
-      </Box>
-    </Grid>
+        }
+      />
+      <BottomNavigationAction
+        label="Contact Me"
+        icon={<HandshakeIcon style={{ width: 35, height: 35 }} />}
+      />
+    </BottomNavigation>
+  </Box>
+
   );
 };
