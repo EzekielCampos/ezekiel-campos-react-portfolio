@@ -15,17 +15,17 @@ export const Nav = () => {
     <Grid
       container
       style={{
-        padding: "25px",
+        padding: "15px",
         background: "linear-gradient(90deg, #f5f7fa, #c3cfe2)",
         color: "#333",
       }}
     >
-      <Grid container size={12} alignItems={"center"} >
+      <Grid container size={12} alignItems={"center"}marginRight={'10px'}>
         <Grid size={{ xs: 6, md: 9, sm: 7 }}>
           <h2
             style={{
               fontFamily: "'Playfair Display', sans-serif",
-              fontWeight: 600,
+              fontWeight: 400,
             }}
           >
             Ezekiel Campos
@@ -55,5 +55,6 @@ export const Nav = () => {
         </Grid>
       </Grid>
     </Grid>
+    
   );
 };

@@ -4,6 +4,7 @@
 // import githubIcon from './assets/github-mark.svg'
 // import './App.css'
 import {Nav}  from './components/Navbar'
+import { Footer } from './components/Footer'
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -11,7 +12,8 @@ function App() {
   return (
     <>
       {/* <div> */}
-        <Nav/>
+     <Nav/>
+     <Footer/>
         {/* <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
