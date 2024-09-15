@@ -17,7 +17,16 @@ export const Footer = () => {
 
   return (
     <Grid container>
-      <Box sx={{ width: 1000 }}>
+      <Box
+        sx={{
+          width: "100%",
+          border: "solid, 1px, black",
+          marginTop: "100%",
+          padding: "15px",
+          background: "linear-gradient(90deg, #f5f7fa, #c3cfe2)",
+          color: "#333",
+        }}
+      >
         <BottomNavigation
           showLabels
           value={value}
