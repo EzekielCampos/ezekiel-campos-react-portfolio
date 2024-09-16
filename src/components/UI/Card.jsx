@@ -19,9 +19,9 @@ export const ProjectCard = ({ data }) => {
       <Grid size={{ xs: 12, md: 6, s: 4 }} key={data.id}>
         <Card sx={{ display: "flex", flexDirection: "column", height: "100%" }}>
           <CardMedia
-            sx={{ height: 600, objectFit: "cover" }}
+            sx={{ height: 400, objectFit: "cover" }}
             image={data.pic}
-            title="green iguana"
+            title={data.name}
           />
 
           {/* Card Content */}
