@@ -3,6 +3,9 @@ import { ProjectCard } from "./UI/Card";
 
 import { Grid2 as Grid } from "@mui/material";
 
+
+import { projectData } from "../assets/js/projects";
+
 export const Projects = () => {
   //   const [project, setProject] = useState([]);
 
@@ -17,10 +20,10 @@ export const Projects = () => {
         paddingBottom: "175px", // Adjust this value to ensure there's space for the footer
       }}
     >
+      <ProjectCard data={projectData}></ProjectCard>
+      {/* <ProjectCard></ProjectCard>
       <ProjectCard></ProjectCard>
-      <ProjectCard></ProjectCard>
-      <ProjectCard></ProjectCard>
-      <ProjectCard></ProjectCard>
+      <ProjectCard></ProjectCard> */}
     </Grid>
   );
 };
