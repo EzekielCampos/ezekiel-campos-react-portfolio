@@ -1,0 +1,34 @@
+// import { useState } from "react";
+import { ProjectCard } from "./UI/Card";
+
+
+import {
+  Grid2 as Grid,
+} from "@mui/material";
+
+
+
+export const Projects = () => {
+  //   const [project, setProject] = useState([]);
+
+  return (
+    <Grid
+      container
+      spacing={2}
+      direction="row"
+      //   justifyContent={"center"}
+      sx={{
+        minHeight: "50vh",
+        paddingTop: "50px", // Padding around content
+        paddingBottom: "175px", // Adjust this value to ensure there's space for the footer
+      }}
+    >
+        <ProjectCard></ProjectCard>
+        <ProjectCard></ProjectCard>
+        <ProjectCard></ProjectCard>
+        <ProjectCard></ProjectCard>
+
+   
+    </Grid>
+  );
+};
