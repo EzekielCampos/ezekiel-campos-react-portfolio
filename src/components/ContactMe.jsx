@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import {
   Grid2 as Grid,
   Paper,
@@ -5,15 +7,26 @@ import {
   Button,
   Typography,
   Box,
+  Backdrop,
 } from "@mui/material";
+
+import RingLoader from "react-spinners/RingLoader";
 
 import { Form, Field } from "react-final-form";
 
 export const Contact = () => {
+  const [loading, setLoading] = useState(false);
   return (
     <Form
       onSubmit={(values, form) => {
-        console.log(values);
+        setLoading(true);
+
+        setTimeout(() => {
+          console.log(values);
+          setLoading(false);
+        }, 2000);
+
+        // setLoading(false);
         form.reset();
       }}
       initialValues={{
@@ -26,10 +39,22 @@ export const Contact = () => {
           <Grid
             container
             justifyContent="center"
-            sx={{ paddingTop: "50px", paddingBottom:'150px' }}
+            sx={{
+              paddingTop: "50px",
+              paddingBottom: "150px",
+            }}
           >
-            <Grid size={{ md: 8, sm: 6 }}>
-              <Paper sx={{ paddingTop: "50px", paddingBottom: "50px" }}>
+            <Backdrop open={loading}>
+              <RingLoader color="blue" speed={2} />
+            </Backdrop>
+
+            <Grid size={{ md: 10, sm: 8 }}>
+              <Paper
+                sx={{
+                  paddingTop: "50px",
+                  paddingBottom: "50px",
+                }}
+              >
                 <Grid container spacing={2} justifyContent="center">
                   <Grid size={12}>
                     <Typography variant="h5" style={{ textAlign: "center" }}>
@@ -38,7 +63,7 @@ export const Contact = () => {
                   </Grid>
                   {/*Render Field Combined with Final Form Here Make sure it's the one with Material UI */}
                   <Grid size={8}>
-                    <Typography>Name:</Typography>
+                    <Typography sx={{ marginBottom: "20px" }}>Name:</Typography>
                     <Field
                       name="nameInput"
                       render={({ input }) => {
@@ -55,7 +80,9 @@ export const Contact = () => {
                     />
                   </Grid>
                   <Grid size={8}>
-                    <Typography>Email:</Typography>
+                    <Typography sx={{ marginBottom: "20px" }}>
+                      Email:
+                    </Typography>
                     <Field
                       name="emailInput"
                       render={({ input }) => {
@@ -64,7 +91,7 @@ export const Contact = () => {
                             {...input}
                             variant="outlined"
                             label="john@mail.com"
-                            placedholder="email"
+                            placedholder="Email"
                             fullWidth
                           />
                         );
@@ -72,7 +99,9 @@ export const Contact = () => {
                     />
                   </Grid>
                   <Grid size={8}>
-                    <Typography>Message:</Typography>
+                    <Typography sx={{ marginBottom: "20px" }}>
+                      Message:
+                    </Typography>
                     <Field
                       name="messageInput"
                       render={({ input }) => {
@@ -80,14 +109,22 @@ export const Contact = () => {
                           <TextField
                             {...input}
                             variant="outlined"
-                            label="Message"
-                            placedholder="Write your message"
+                            label="Write your message"
+                            placedholder="Message"
                             fullWidth
+                            multiline
                             sx={{
-                                "& .MuiInputBase-root": {
-                                  height: 200, // Adjust the overall height of the TextField
-                                },
-                              }}
+                              "& .MuiInputBase-root": {
+                                height: 200, // Adjust the overall height of the TextField
+                                display: "flex",
+                                alignItems: "flex-start",
+                                justifyContent: "flex-start",
+                              },
+                              "& .MuiInputBase-input": {
+                                padding: "10px", // Adjust the padding to your needs
+                                textAlign: "left", // Aligns the text to the left
+                              },
+                            }}
                           />
                         );
                       }}
@@ -101,7 +138,7 @@ export const Contact = () => {
                         color="primary"
                         onClick={handleSubmit}
                       >
-                        Add Todo
+                        Submit
                       </Button>
                     </Grid>
                     {/*Finish the on click of this button */}

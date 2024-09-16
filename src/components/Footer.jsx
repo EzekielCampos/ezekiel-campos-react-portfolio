@@ -55,9 +55,9 @@ export const Footer = () => {
 //   </Box>
 <Box
     sx={{
-      position: 'fixed',
-      bottom: 0,
-      left: 0,
+      // position: 'fixed',
+      // bottom: 0,
+      // left: 0,
       width: '100%',
       background: 'linear-gradient(90deg, #f5f7fa, #c3cfe2)',
       padding: '8px',
