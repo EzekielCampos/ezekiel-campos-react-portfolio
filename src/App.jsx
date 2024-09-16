@@ -6,7 +6,8 @@
 import {Nav}  from './components/Navbar'
 import { Footer } from './components/Footer'
 // import {Bio} from './components/Bio'
-import {Projects} from './components/Projects'
+// import {Projects} from './components/Projects'
+import {Contact} from './components/ContactMe';
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -16,7 +17,8 @@ function App() {
       {/* <div> */}
      <Nav/>
      {/* <Bio></Bio> */}
-     <Projects></Projects>
+     {/* <Projects></Projects> */}
+     <Contact/>
      <Footer></Footer>
         {/* <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
