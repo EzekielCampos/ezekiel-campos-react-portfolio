@@ -12,7 +12,6 @@ import { Form, Field } from "react-final-form";
 export const Contact = () => {
   return (
     <Form
-    
       onSubmit={(values, form) => {
         console.log(values);
         form.reset();
@@ -27,22 +26,19 @@ export const Contact = () => {
           <Grid
             container
             justifyContent="center"
-            sx={{
-              border: "1px solid purple",
-            }}
+            sx={{ paddingTop: "50px", paddingBottom:'150px' }}
           >
-            <Grid size={12}>
-              <Paper>
+            <Grid size={{ md: 8, sm: 6 }}>
+              <Paper sx={{ paddingTop: "50px", paddingBottom: "50px" }}>
                 <Grid container spacing={2} justifyContent="center">
                   <Grid size={12}>
-                    <Typography variant="h4" style={{ textAlign: "center" }}>
-                      Todo App
+                    <Typography variant="h5" style={{ textAlign: "center" }}>
+                      Let's Connect
                     </Typography>
                   </Grid>
-
                   {/*Render Field Combined with Final Form Here Make sure it's the one with Material UI */}
-                  <Grid size={{ xs: 12, sm: 6 }}>
-                    <Typography>Ezekiel</Typography>
+                  <Grid size={8}>
+                    <Typography>Name:</Typography>
                     <Field
                       name="todoInput"
                       render={({ input }) => {
@@ -57,7 +53,9 @@ export const Contact = () => {
                         );
                       }}
                     />
-                    <Typography>Ezekiel</Typography>
+                  </Grid>
+                  <Grid size={8}>
+                    <Typography>Name:</Typography>
                     <Field
                       name="todoInput"
                       render={({ input }) => {
@@ -72,7 +70,9 @@ export const Contact = () => {
                         );
                       }}
                     />
-                    <Typography>Ezekiel</Typography>
+                  </Grid>
+                  <Grid size={8}>
+                    <Typography>Name:</Typography>
                     <Field
                       name="todoInput"
                       render={({ input }) => {
@@ -89,9 +89,8 @@ export const Contact = () => {
                     />
                   </Grid>
 
-                  <Grid size={12}>
-                    <Box display="flex" justifyContent="center">
-                      {/*Finish the on click of this button */}
+                  <Grid container justifyContent="center" size={8}>
+                    <Grid>
                       <Button
                         variant="contained"
                         color="secondary"
@@ -99,7 +98,8 @@ export const Contact = () => {
                       >
                         Add Todo
                       </Button>
-                    </Box>
+                    </Grid>
+                    {/*Finish the on click of this button */}
                   </Grid>
                 </Grid>
               </Paper>
