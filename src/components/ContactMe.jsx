@@ -40,14 +40,14 @@ export const Contact = () => {
                   <Grid size={8}>
                     <Typography>Name:</Typography>
                     <Field
-                      name="todoInput"
+                      name="nameInput"
                       render={({ input }) => {
                         return (
                           <TextField
                             {...input}
                             variant="outlined"
-                            label="Todos weeee"
-                            placedholder="This is hard"
+                            label="John"
+                            placedholder="Name"
                             fullWidth
                           />
                         );
@@ -55,16 +55,16 @@ export const Contact = () => {
                     />
                   </Grid>
                   <Grid size={8}>
-                    <Typography>Name:</Typography>
+                    <Typography>Email:</Typography>
                     <Field
-                      name="todoInput"
+                      name="emailInput"
                       render={({ input }) => {
                         return (
                           <TextField
                             {...input}
                             variant="outlined"
-                            label="Todos weeee"
-                            placedholder="This is hard"
+                            label="john@mail.com"
+                            placedholder="email"
                             fullWidth
                           />
                         );
@@ -72,17 +72,22 @@ export const Contact = () => {
                     />
                   </Grid>
                   <Grid size={8}>
-                    <Typography>Name:</Typography>
+                    <Typography>Message:</Typography>
                     <Field
-                      name="todoInput"
+                      name="messageInput"
                       render={({ input }) => {
                         return (
                           <TextField
                             {...input}
                             variant="outlined"
-                            label="Todos weeee"
-                            placedholder="This is hard"
+                            label="Message"
+                            placedholder="Write your message"
                             fullWidth
+                            sx={{
+                                "& .MuiInputBase-root": {
+                                  height: 200, // Adjust the overall height of the TextField
+                                },
+                              }}
                           />
                         );
                       }}
@@ -93,7 +98,7 @@ export const Contact = () => {
                     <Grid>
                       <Button
                         variant="contained"
-                        color="secondary"
+                        color="primary"
                         onClick={handleSubmit}
                       >
                         Add Todo
