@@ -10,16 +10,18 @@ import {
 // import Stack from "@mui/material/Stack";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LanguageIcon from "@mui/icons-material/Language"; // For deployed page icon
+import PropTypes from 'prop-types';
 
-import image from "../../assets/img/profile.jpg";
+// import image from "../../assets/img/profile.jpg";
 
-export const ProjectCard = () => {
+export const ProjectCard = ({ data }) => {
+  console.log(data);
   return (
     <Grid size={{ xs: 12, md: 6, s: 4 }}>
       <Card sx={{ display: "flex", flexDirection: "column", height: "100%" }}>
         <CardMedia
           sx={{ height: 600, objectFit: "cover" }}
-          image={image}
+          image={data.pic}
           title="green iguana"
         />
 
@@ -27,11 +29,12 @@ export const ProjectCard = () => {
         <CardContent>
           <Grid container justifyContent={"center"}>
             <Typography gutterBottom variant="h5" component="div">
-              Lizard
+              {data.name}
             </Typography>
+          </Grid>
+          <Grid container justifyContent={"center"}>
             <Typography variant="body2" sx={{ color: "text.secondary" }}>
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica.
+              {data.description}
             </Typography>
           </Grid>
         </CardContent>
@@ -41,7 +44,7 @@ export const ProjectCard = () => {
           {/* GitHub Icon */}
           <IconButton
             sx={{ color: "skyBlue" }}
-            //   onClick={() => window.open(githubUrl, "_blank")}
+              onClick={() => window.open(data.github)}
           >
             <GitHubIcon style={{ width: 35, height: 35 }} />
           </IconButton>
@@ -58,3 +61,12 @@ export const ProjectCard = () => {
     </Grid>
   );
 };
+
+ProjectCard.propTypes = {
+    data: PropTypes.shape({
+      name: PropTypes.string,      // `title` should be a string
+      description: PropTypes.string, // `description` should be a string
+      github:PropTypes.string,
+      pic:PropTypes.string,
+    }).isRequired,
+  };
