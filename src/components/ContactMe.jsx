@@ -40,7 +40,7 @@ export const Contact = () => {
             justifyContent="center"
             sx={{
               paddingTop: "50px",
-              paddingBottom: "150px",
+              paddingBottom: "100px",
             }}
           >
             <Backdrop open={loading}>
