@@ -6,11 +6,10 @@ import {
   TextField,
   Button,
   Typography,
-  Box,
   Backdrop,
 } from "@mui/material";
 
-import RingLoader from "react-spinners/RingLoader";
+import RiseLoader from "react-spinners/RiseLoader";
 
 import { Form, Field } from "react-final-form";
 
@@ -45,11 +44,12 @@ export const Contact = () => {
             }}
           >
             <Backdrop open={loading}>
-              <RingLoader color="blue" speed={2} />
+              <RiseLoader color="lightGrey" speed={2} />
             </Backdrop>
 
             <Grid size={{ md: 10, sm: 8 }}>
               <Paper
+              elevation={3} 
                 sx={{
                   paddingTop: "50px",
                   paddingBottom: "50px",
@@ -58,7 +58,7 @@ export const Contact = () => {
                 <Grid container spacing={2} justifyContent="center">
                   <Grid size={12}>
                     <Typography variant="h5" style={{ textAlign: "center" }}>
-                      Let's Connect
+                      Connect With Me
                     </Typography>
                   </Grid>
                   {/*Render Field Combined with Final Form Here Make sure it's the one with Material UI */}

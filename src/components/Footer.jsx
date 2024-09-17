@@ -4,15 +4,15 @@ import {
   BottomNavigation,
   BottomNavigationAction,
 } from "@mui/material";
-// import RestoreIcon from "@mui/icons-material/Restore";
-// import FavoriteIcon from "@mui/icons-material/Favorite";
-// import LocationOnIcon from "@mui/icons-material/LocationOn";
-import HandshakeIcon from "@mui/icons-material/Handshake";
 import githubIcon from "../assets/github-mark.svg";
+import linkedinIcon from '../assets/linkedin-mark.svg'
 export const Footer = () => {
   const [value, setValue] = useState(0);
   const handleGitHubClick = () => {
     window.location.href = "https://github.com/EzekielCampos"; // Replace with your GitHub URL
+  };
+  const handleLinkedinClick = () => {
+    window.location.href = "https://www.linkedin.com/"; // Replace with your GitHub URL
   };
 
   return (
@@ -90,14 +90,15 @@ export const Footer = () => {
         onClick={handleGitHubClick}
       />
       <BottomNavigationAction
-        label="Contact Me"
-        icon={<HandshakeIcon style={{ width: 35, height: 35 }} />}
+        label="Linkedin"
+        icon={<img src={linkedinIcon} style={{width: 35, height: 35, color:"black"}}/>}
         sx={{
           '&:hover': {
             color: 'primary.main', // Change color on hover
             backgroundColor: 'rgba(0,0,0,0.1)', // Optional: add background color on hover
           },
         }}
+        onClick={handleLinkedinClick}
       />
     </BottomNavigation>
   </Box>
