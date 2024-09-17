@@ -13,19 +13,22 @@ import RiseLoader from "react-spinners/RiseLoader";
 
 import { Form, Field } from "react-final-form";
 
+import { verifyEmail } from "./verification";
+
 export const Contact = () => {
   const [loading, setLoading] = useState(false);
+
+  const [error, setError] = useState(true);
   return (
     <Form
       onSubmit={(values, form) => {
         setLoading(true);
 
         setTimeout(() => {
-          console.log(values);
+          setError(verifyEmail(values.emailInput));
           setLoading(false);
         }, 2000);
-
-        // setLoading(false);
+        console.log(error);
         form.reset();
       }}
       initialValues={{
@@ -49,7 +52,7 @@ export const Contact = () => {
 
             <Grid size={{ md: 10, sm: 8 }}>
               <Paper
-              elevation={3} 
+                elevation={3}
                 sx={{
                   paddingTop: "50px",
                   paddingBottom: "50px",
