@@ -2,7 +2,7 @@ import { useState } from "react";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import { Grid2 as Grid } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,useLocation } from "react-router-dom";
 
 export const Nav = () => {
   const [value, setValue] = useState("one");
@@ -11,7 +11,7 @@ export const Nav = () => {
     one: "/",
     two: "/projects",
     three: "/contact-info",
-    resume: "/resume",
+    resume: useLocation()
   };
 
   const handleChange = (event, newValue) => {
@@ -71,6 +71,7 @@ export const Nav = () => {
               value="resume"
               label="Resume"
               sx={{ minWidth: 80, padding: "6px 12px", fontSize: ".850rem" }} // Adjust the size
+              // onClick={()=>{console.log("Resume")}}
             />
           </Tabs>
         </Grid>
