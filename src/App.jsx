@@ -5,9 +5,10 @@
 // import './App.css'
 import {Nav}  from './components/Navbar'
 import { Footer } from './components/Footer'
+import {Outlet} from "react-router-dom"
 // import {Bio} from './components/Bio'
 // import {Projects} from './components/Projects'
-import {Contact} from './components/ContactMe';
+// import {Contact} from './components/ContactMe';
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -18,7 +19,8 @@ function App() {
      <Nav/>
      {/* <Bio></Bio> */}
      {/* <Projects></Projects> */}
-     <Contact/>
+     {/* <Contact/> */}
+     <Outlet />
      <Footer></Footer>
         {/* <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />

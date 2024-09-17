@@ -2,12 +2,21 @@ import { useState } from "react";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import { Grid2 as Grid } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 export const Nav = () => {
   const [value, setValue] = useState("one");
+  const navigate = useNavigate();
+  const routes = {
+    one: "/",
+    two: "/projects",
+    three: "/contact-info",
+    resume: "/resume",
+  };
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
+    navigate(routes[newValue]);
   };
 
   return (
@@ -40,30 +49,27 @@ export const Nav = () => {
             aria-label="scrollable auto tabs example"
             TabIndicatorProps={{
               style: { display: value === "resume" ? "none" : "block" },
-            }} // No indicator for "Resume"
+            }}
           >
             <Tab
               value="one"
               label="About Me"
-              onClick={() => console.log("test")}
               sx={{ minWidth: 80, padding: "6px 12px", fontSize: ".850rem" }} // Adjust the size
             />
             <Tab
               value="two"
               label="My Projects"
-              onClick={() => console.log("test 2")}
               sx={{ minWidth: 80, padding: "6px 12px", fontSize: ".850rem" }} // Adjust the size
             />
             <Tab
               value="three"
               label="Contact Me"
-              onClick={() => console.log("test 3")}
               sx={{ minWidth: 80, padding: "6px 12px", fontSize: ".850rem" }} // Adjust the size
             />
+
             <Tab
               value="resume"
               label="Resume"
-              onClick={() => console.log("test 4")}
               sx={{ minWidth: 80, padding: "6px 12px", fontSize: ".850rem" }} // Adjust the size
             />
           </Tabs>
