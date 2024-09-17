@@ -32,7 +32,16 @@ export const Nav = () => {
           </h2>
         </Grid>
         <Grid size={{ md: 4, xs: 6, sm: 5 }}>
-          <Tabs value={value} onChange={handleChange}>
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            variant="scrollable"
+            scrollButtons="auto"
+            aria-label="scrollable auto tabs example"
+            TabIndicatorProps={{
+              style: { display: value === "resume" ? "none" : "block" },
+            }} // No indicator for "Resume"
+          >
             <Tab
               value="one"
               label="About Me"
@@ -51,8 +60,8 @@ export const Nav = () => {
               onClick={() => console.log("test 3")}
               sx={{ minWidth: 80, padding: "6px 12px", fontSize: ".850rem" }} // Adjust the size
             />
-             <Tab
-            
+            <Tab
+              value="resume"
               label="Resume"
               onClick={() => console.log("test 4")}
               sx={{ minWidth: 80, padding: "6px 12px", fontSize: ".850rem" }} // Adjust the size
