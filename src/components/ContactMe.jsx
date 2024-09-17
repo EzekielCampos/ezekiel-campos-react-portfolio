@@ -18,17 +18,17 @@ import { verifyEmail } from "./verification";
 export const Contact = () => {
   const [loading, setLoading] = useState(false);
 
-  const [error, setError] = useState(true);
+  const [valid, setValid] = useState(true);
   return (
     <Form
       onSubmit={(values, form) => {
         setLoading(true);
 
         setTimeout(() => {
-          setError(verifyEmail(values.emailInput));
+          setValid(verifyEmail(values.emailInput));
           setLoading(false);
         }, 2000);
-        console.log(error);
+        console.log(valid);
         form.reset();
       }}
       initialValues={{
@@ -134,7 +134,7 @@ export const Contact = () => {
                     />
                   </Grid>
 
-                  <Grid container justifyContent="center" size={8}>
+                  <Grid container justifyContent="center" size={8} >
                     <Grid>
                       <Button
                         variant="contained"
@@ -146,6 +146,11 @@ export const Contact = () => {
                     </Grid>
                     {/*Finish the on click of this button */}
                   </Grid>
+                  {!valid && (
+                    <Grid container justifyContent={"center"} size={8}>
+                      <Typography variant="h6" sx={{color:"red"}}>Invalid Email</Typography>
+                    </Grid>
+                  )}
                 </Grid>
               </Paper>
             </Grid>
