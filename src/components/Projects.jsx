@@ -17,7 +17,7 @@ export const Projects = () => {
       sx={{
         minHeight: "50vh",
         paddingTop: "50px", // Padding around content
-        paddingBottom: "175px", // Adjust this value to ensure there's space for the footer
+        paddingBottom: "100px", // Adjust this value to ensure there's space for the footer
       }}
     >
       <ProjectCard data={projectData}></ProjectCard>
