@@ -16,6 +16,8 @@ import { Form, Field } from "react-final-form";
 import { verifyEmail } from "./verification";
 
 export const Contact = () => {
+  const required = (value) => (value ? undefined : "This field is required");
+
   const [loading, setLoading] = useState(false);
 
   const [valid, setValid] = useState(true);
@@ -88,7 +90,8 @@ export const Contact = () => {
                     </Typography>
                     <Field
                       name="emailInput"
-                      render={({ input }) => {
+                      validate={required}
+                      render={({ input,meta }) => {
                         return (
                           <TextField
                             {...input}
@@ -96,6 +99,8 @@ export const Contact = () => {
                             label="john@mail.com"
                             placedholder="Email"
                             fullWidth
+                            error={meta.touched && meta.error ? true : false} // Handle TextField error state
+              helperText={meta.touched && meta.error ? meta.error : null} // Display error message
                           />
                         );
                       }}
@@ -107,7 +112,8 @@ export const Contact = () => {
                     </Typography>
                     <Field
                       name="messageInput"
-                      render={({ input }) => {
+                      validate={required}
+                      render={({ input, meta }) => {
                         return (
                           <TextField
                             {...input}
@@ -116,6 +122,10 @@ export const Contact = () => {
                             placedholder="Message"
                             fullWidth
                             multiline
+                            error={meta.touched && meta.error ? true : false} // Handle TextField error state
+                            helperText={
+                              meta.touched && meta.error ? meta.error : null
+                            } // Display error message
                             sx={{
                               "& .MuiInputBase-root": {
                                 height: 200, // Adjust the overall height of the TextField
@@ -134,7 +144,7 @@ export const Contact = () => {
                     />
                   </Grid>
 
-                  <Grid container justifyContent="center" size={8} >
+                  <Grid container justifyContent="center" size={8}>
                     <Grid>
                       <Button
                         variant="contained"
@@ -148,7 +158,9 @@ export const Contact = () => {
                   </Grid>
                   {!valid && (
                     <Grid container justifyContent={"center"} size={8}>
-                      <Typography variant="h6" sx={{color:"red"}}>Invalid Email</Typography>
+                      <Typography variant="h6" sx={{ color: "red" }}>
+                        Invalid Email
+                      </Typography>
                     </Grid>
                   )}
                 </Grid>
