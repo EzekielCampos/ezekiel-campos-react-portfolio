@@ -1,21 +1,25 @@
-import { useState } from "react";
+import { useState,} from "react";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import { Grid2 as Grid } from "@mui/material";
-import { useNavigate,useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 export const Nav = () => {
-  const [value, setValue] = useState("one");
+  // const [value, setValue] = useState("one");
+  const [value, setValue] = useState(() => {
+    return sessionStorage.getItem("selectedTab") || "one";
+  });
   const navigate = useNavigate();
   const routes = {
     one: "/",
     two: "/projects",
     three: "/contact-info",
-    resume: useLocation()
+    resume: useLocation(),
   };
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
+    sessionStorage.setItem("selectedTab", newValue);
     navigate(routes[newValue]);
   };
 
@@ -47,9 +51,6 @@ export const Nav = () => {
             variant="scrollable"
             scrollButtons="auto"
             aria-label="scrollable auto tabs example"
-            TabIndicatorProps={{
-              style: { display: value === "resume" ? "none" : "block" },
-            }}
           >
             <Tab
               value="one"
