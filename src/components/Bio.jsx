@@ -27,14 +27,22 @@ export const Bio = () => {
           sx={{ width: 400, height: 400 }}
         />
       </Grid>
-      <Grid size={{ xs: 12, md: 7 }}>
+      <Grid
+        size={{ xs: 12, md: 7 }}
+        sx={{ paddingRight: "20px", paddingLeft: "20px" }}
+      >
         <Grid display="flex" justifyContent="center">
           <Typography variant="h3" component="h1" gutterBottom>
             Ezekiel Campos
           </Typography>
         </Grid>
         <Grid display="flex" justifyContent="center">
-          <Typography variant="h6" component="h2" gutterBottom style={{fontWeight:"bold", paddingBottom:"10px"}}>
+          <Typography
+            variant="h6"
+            component="h2"
+            gutterBottom
+            style={{ fontWeight: "bold", paddingBottom: "10px" }}
+          >
             Full-Stack Developer
           </Typography>
         </Grid>
@@ -55,9 +63,6 @@ export const Bio = () => {
           in the footer.
         </Typography>
       </Grid>
-      
     </Grid>
   );
 };
-
-

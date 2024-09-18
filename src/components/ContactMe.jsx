@@ -13,20 +13,34 @@ import RiseLoader from "react-spinners/RiseLoader";
 
 import { Form, Field } from "react-final-form";
 
+import { verifyEmail } from "./verification";
+
 export const Contact = () => {
+  const requiredMail = (value) => {
+    if (!value) {
+      return "This field is required"; // Check if the field is empty
+    }
+    if (!verifyEmail(value)) {
+      return "Invalid Email"; // Check if the value is a valid email
+    }
+    return undefined; // No error
+  };
+
+  const required = (value) => (value ? undefined : "This field is required");
+
   const [loading, setLoading] = useState(false);
+
+
   return (
     <Form
       onSubmit={(values, form) => {
         setLoading(true);
 
         setTimeout(() => {
-          console.log(values);
           setLoading(false);
         }, 2000);
-
-        // setLoading(false);
-        form.reset();
+        // form.reset();
+        form.restart();
       }}
       initialValues={{
         nameInput: "",
@@ -49,7 +63,7 @@ export const Contact = () => {
 
             <Grid size={{ md: 10, sm: 8 }}>
               <Paper
-              elevation={3} 
+                elevation={3}
                 sx={{
                   paddingTop: "50px",
                   paddingBottom: "50px",
@@ -85,7 +99,8 @@ export const Contact = () => {
                     </Typography>
                     <Field
                       name="emailInput"
-                      render={({ input }) => {
+                      validate={requiredMail}
+                      render={({ input, meta }) => {
                         return (
                           <TextField
                             {...input}
@@ -93,6 +108,10 @@ export const Contact = () => {
                             label="john@mail.com"
                             placedholder="Email"
                             fullWidth
+                            error={meta.touched && meta.error ? true : false} // Handle TextField error state
+                            helperText={
+                              meta.touched && !input.error ? meta.error : null
+                            } // Display error message
                           />
                         );
                       }}
@@ -104,7 +123,8 @@ export const Contact = () => {
                     </Typography>
                     <Field
                       name="messageInput"
-                      render={({ input }) => {
+                      validate={required}
+                      render={({ input, meta }) => {
                         return (
                           <TextField
                             {...input}
@@ -113,6 +133,10 @@ export const Contact = () => {
                             placedholder="Message"
                             fullWidth
                             multiline
+                            error={meta.touched && !input.value ? true : false} // Handle TextField error state
+                            helperText={
+                              meta.touched && !input.value ? meta.error : null
+                            } // Display error message
                             sx={{
                               "& .MuiInputBase-root": {
                                 height: 200, // Adjust the overall height of the TextField
@@ -141,7 +165,6 @@ export const Contact = () => {
                         Submit
                       </Button>
                     </Grid>
-                    {/*Finish the on click of this button */}
                   </Grid>
                 </Grid>
               </Paper>
