@@ -16,11 +16,27 @@ import { Form, Field } from "react-final-form";
 import { verifyEmail } from "./verification";
 
 export const Contact = () => {
+  const requiredMail = (value) => {
+    if (!value) {
+      return "This field is required"; // Check if the field is empty
+    }
+    if (!verifyEmail(value)) {
+      return "Invalid Email"; // Check if the value is a valid email
+    }
+    return undefined; // No error
+  };
+
+
   const required = (value) => (value ? undefined : "This field is required");
+
+  
+  
 
   const [loading, setLoading] = useState(false);
 
   const [valid, setValid] = useState(true);
+
+
   return (
     <Form
       onSubmit={(values, form) => {
@@ -29,9 +45,11 @@ export const Contact = () => {
         setTimeout(() => {
           setValid(verifyEmail(values.emailInput));
           setLoading(false);
+          
         }, 2000);
         console.log(valid);
         form.reset();
+        form.restart()
       }}
       initialValues={{
         nameInput: "",
@@ -90,8 +108,8 @@ export const Contact = () => {
                     </Typography>
                     <Field
                       name="emailInput"
-                      validate={required}
-                      render={({ input,meta }) => {
+                      validate={requiredMail}
+                      render={({ input, meta }) => {
                         return (
                           <TextField
                             {...input}
@@ -99,8 +117,10 @@ export const Contact = () => {
                             label="john@mail.com"
                             placedholder="Email"
                             fullWidth
-                            error={meta.touched && meta.error ? true : false} // Handle TextField error state
-              helperText={meta.touched && meta.error ? meta.error : null} // Display error message
+                            error= {meta.touched && meta.error ? true:false}// Handle TextField error state
+                            helperText={
+                             meta.touched && !input.error? meta.error:null
+                            } // Display error message
                           />
                         );
                       }}
@@ -122,9 +142,9 @@ export const Contact = () => {
                             placedholder="Message"
                             fullWidth
                             multiline
-                            error={meta.touched && meta.error ? true : false} // Handle TextField error state
+                            error= {meta.touched && !input.value ? true:false}// Handle TextField error state
                             helperText={
-                              meta.touched && meta.error ? meta.error : null
+                             meta.touched && !input.value? meta.error:null
                             } // Display error message
                             sx={{
                               "& .MuiInputBase-root": {
