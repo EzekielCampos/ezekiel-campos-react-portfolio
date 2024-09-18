@@ -26,15 +26,9 @@ export const Contact = () => {
     return undefined; // No error
   };
 
-
   const required = (value) => (value ? undefined : "This field is required");
 
-  
-  
-
   const [loading, setLoading] = useState(false);
-
-  const [valid, setValid] = useState(true);
 
 
   return (
@@ -43,13 +37,10 @@ export const Contact = () => {
         setLoading(true);
 
         setTimeout(() => {
-          setValid(verifyEmail(values.emailInput));
           setLoading(false);
-          
         }, 2000);
-        console.log(valid);
-        form.reset();
-        form.restart()
+        // form.reset();
+        form.restart();
       }}
       initialValues={{
         nameInput: "",
@@ -117,9 +108,9 @@ export const Contact = () => {
                             label="john@mail.com"
                             placedholder="Email"
                             fullWidth
-                            error= {meta.touched && meta.error ? true:false}// Handle TextField error state
+                            error={meta.touched && meta.error ? true : false} // Handle TextField error state
                             helperText={
-                             meta.touched && !input.error? meta.error:null
+                              meta.touched && !input.error ? meta.error : null
                             } // Display error message
                           />
                         );
@@ -142,9 +133,9 @@ export const Contact = () => {
                             placedholder="Message"
                             fullWidth
                             multiline
-                            error= {meta.touched && !input.value ? true:false}// Handle TextField error state
+                            error={meta.touched && !input.value ? true : false} // Handle TextField error state
                             helperText={
-                             meta.touched && !input.value? meta.error:null
+                              meta.touched && !input.value ? meta.error : null
                             } // Display error message
                             sx={{
                               "& .MuiInputBase-root": {
@@ -174,15 +165,7 @@ export const Contact = () => {
                         Submit
                       </Button>
                     </Grid>
-                    {/*Finish the on click of this button */}
                   </Grid>
-                  {!valid && (
-                    <Grid container justifyContent={"center"} size={8}>
-                      <Typography variant="h6" sx={{ color: "red" }}>
-                        Invalid Email
-                      </Typography>
-                    </Grid>
-                  )}
                 </Grid>
               </Paper>
             </Grid>
