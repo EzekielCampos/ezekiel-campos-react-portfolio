@@ -14,7 +14,7 @@ export const Nav = () => {
     one: "/",
     two: "/projects",
     three: "/contact-info",
-    resume: useLocation(),
+    resume: "/resume",
   };
 
   const handleChange = (event, newValue) => {

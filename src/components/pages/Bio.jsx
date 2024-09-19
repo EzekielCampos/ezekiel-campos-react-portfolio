@@ -10,7 +10,7 @@ export const Bio = () => {
       alignItems="center"
       spacing={2}
       sx={{
-        minHeight: "100vh",
+        minHeight: "750px",
         paddingTop: "50px", // Padding around content
         paddingBottom: "175px", // Adjust this value to ensure there's space for the footer
         background:"#B7B7B7"
