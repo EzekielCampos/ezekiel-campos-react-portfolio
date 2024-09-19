@@ -1,34 +1,21 @@
-import {
-    ListItem,
-    ListItemIcon,
-    ListItemText,
-  } from "@mui/material";
-  
+import { ListItem, ListItemIcon, ListItemText } from "@mui/material";
 
+export const Skills = ({ data }) => {
+    console.log(data);
+  return data.map((item) => {
+    return (
+      <ListItem key={item.id}>
+        <ListItemIcon style={{ minWidth: "auto", marginRight: "8px" }}>
+          •
+        </ListItemIcon>
+        <ListItemText>{item.tech}</ListItemText>
+      </ListItem>
+    );
+  });
+};
 
-  export const Skills = ({data})=>{
-
-    return(data.map((item)=>{
-        return(
-            <ListItem key={item.id}>
-            <ListItemIcon style={{ minWidth: "auto", marginRight: "8px" }}>
-              •
-            </ListItemIcon>
-            <ListItemText>
-              {item.tech}
-            </ListItemText>
-          </ListItem>
-
-        )
-    })
-       
-    )
-
-  }
-
-
-
-{/* <ListItem>
+{
+  /* <ListItem>
 <ListItemIcon style={{ minWidth: "auto", marginRight: "8px" }}>
   •
 </ListItemIcon>
@@ -45,8 +32,11 @@ import {
 </ListItemIcon>
 <ListItemText fontSize={10}>
   second Item
-  {/* <ListItemIcon sx={{ width: 20, height: 20, color:"black" }}>{reactIcon}</ListItemIcon> */}
-  {/* React icon */}
+  {/* <ListItemIcon sx={{ width: 20, height: 20, color:"black" }}>{reactIcon}</ListItemIcon> */
+}
+{
+  /* React icon */
+}
 // </ListItemText>
 // </ListItem>
 // <ListItem>
