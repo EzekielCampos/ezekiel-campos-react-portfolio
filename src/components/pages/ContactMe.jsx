@@ -7,6 +7,7 @@ import {
   Button,
   Typography,
   Backdrop,
+  Snackbar
 } from "@mui/material";
 
 import RiseLoader from "react-spinners/RiseLoader";
@@ -29,7 +30,8 @@ export const Contact = () => {
   const required = (value) => (value ? undefined : "This field is required");
 
   const [loading, setLoading] = useState(false);
-
+  const [isSnackbarOpen, setIsSnackbarOpen] = useState(false);
+  const [snackbarMessage, setSnackbarMessage] = useState("");
 
   return (
     <Form
@@ -37,6 +39,9 @@ export const Contact = () => {
         setLoading(true);
 
         setTimeout(() => {
+          setIsSnackbarOpen(true);
+
+          setSnackbarMessage("Message was sent!");
           setLoading(false);
         }, 2000);
         // form.reset();
@@ -55,12 +60,19 @@ export const Contact = () => {
             sx={{
               paddingTop: "50px",
               paddingBottom: "100px",
-              background:"#B7B7B7"
+              background: "#B7B7B7",
             }}
           >
             <Backdrop open={loading}>
               <RiseLoader color="lightGrey" speed={2} />
             </Backdrop>
+            <Snackbar
+              open={isSnackbarOpen}
+              anchorOrigin={{ vertical: "top", horizontal: "right" }}
+              autoHideDuration={3000}
+              onClose={() => setIsSnackbarOpen(false)}
+              message={snackbarMessage}
+            />
 
             <Grid size={{ md: 10, sm: 8 }}>
               <Paper
