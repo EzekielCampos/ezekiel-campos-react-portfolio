@@ -55,6 +55,7 @@ export const Contact = () => {
             sx={{
               paddingTop: "50px",
               paddingBottom: "100px",
+              background:"#B7B7B7"
             }}
           >
             <Backdrop open={loading}>
