@@ -1,5 +1,5 @@
 import { Grid2 as Grid, Typography, Avatar } from "@mui/material";
-import portrait from "../assets/img/profile.jpg";
+import portrait from "../../assets/img/profile.jpg";
 
 export const Bio = () => {
   return (

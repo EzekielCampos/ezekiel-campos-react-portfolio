@@ -13,7 +13,7 @@ import RiseLoader from "react-spinners/RiseLoader";
 
 import { Form, Field } from "react-final-form";
 
-import { verifyEmail } from "./verification";
+import { verifyEmail } from "../helpers";
 
 export const Contact = () => {
   const requiredMail = (value) => {
