@@ -1,5 +1,4 @@
-// import JavascriptIcon from "@mui/icons-material/Javascript";
-
+// This data is the skills that will be displayed on the Resume page
 export const skills = [
   {
     id: 1,
@@ -36,39 +35,38 @@ export const skills = [
 
     tech: "PostgresSQL",
   },
-
 ];
 
+// This data is the libraries I have experience with that will be displayed on the Resume page
+
 export const libraries = [
+  {
+    id: 1,
+    tech: "Mongoose",
+  },
+  {
+    id: 2,
+    tech: "Material UI",
+  },
+  {
+    id: 3,
+    tech: "Express.js",
+  },
+  {
+    id: 4,
+    tech: "Vite",
+  },
+  {
+    id: 5,
+    tech: "Boostrap",
+  },
+  {
+    id: 6,
+    tech: "Sequelize",
+  },
+  {
+    id: 7,
 
-{
-  id:1,
-  tech:"Mongoose"
-},
-{
-  id:2,
-  tech:"Material UI"
-},
-{
-  id:3,
-  tech:"Express.js"
-},
-{
-  id:4,
-  tech:"Vite",
-},
-{
-  id:5,
-  tech:"Boostrap"
-},
-{
-  id:6,
-  tech:"Sequelize"
-},
-{
-  id: 7,
-
-  tech: "Express-Session",
-},
-
-]
+    tech: "Express-Session",
+  },
+];

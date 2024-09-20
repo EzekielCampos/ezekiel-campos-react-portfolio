@@ -1,12 +1,12 @@
-// import { useState } from "react";
+// This component will display all the projects in a card
 import { ProjectCard } from "../UI/Card";
 
 import { Grid2 as Grid } from "@mui/material";
 
+// This will be the information that will be displayed in the cards
 import { projectData } from "../../assets/js/projects";
 
 export const Projects = () => {
-
   return (
     <Grid
       container
@@ -21,6 +21,8 @@ export const Projects = () => {
         paddingRight: "20px",
       }}
     >
+      {/* Use the component to display all the projects in a card passing
+      the data to the data prop */}
       <ProjectCard data={projectData}></ProjectCard>
     </Grid>
   );

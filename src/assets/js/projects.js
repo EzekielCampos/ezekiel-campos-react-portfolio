@@ -1,7 +1,9 @@
+// Images of the projects
 import blog from "../img/tech-blog-main.png";
 import listIt from "../img/list-it-home-pg.png";
 import bonAppetit from "../img/bon-appetit-page.png";
 
+// Project data tha will be used for ProjectCard components
 export const projectData = [
   {
     id: 1,
@@ -69,6 +71,7 @@ export const projectData = [
   },
 ];
 
+// This data will be used for the test
 export const testData = [
   {
     id: 1,
