@@ -22,6 +22,8 @@ export const Bio = () => {
         justifyContent="center"
         alignItems={"center"}
       >
+        {/* The Avatar component is where the image is placed in a portrait like 
+        setting */}
         <Avatar
           alt="Ezekiel Campos"
           src={portrait}
@@ -32,11 +34,14 @@ export const Bio = () => {
         size={{ xs: 12, md: 7 }}
         sx={{ paddingRight: "20px", paddingLeft: "20px" }}
       >
+        {/* The bio text will be placed next to the image */}
         <Grid display="flex" justifyContent="center">
+          {/* Name header */}
           <Typography variant="h3" component="h1" gutterBottom>
             Ezekiel Campos
           </Typography>
         </Grid>
+        {/* Positon subheader */}
         <Grid display="flex" justifyContent="center">
           <Typography
             variant="h6"
@@ -47,7 +52,7 @@ export const Bio = () => {
             Full-Stack Developer
           </Typography>
         </Grid>
-
+        {/* Short summary of developer */}
         <Typography variant="body1">
           Welcome to my portfolio page! My journey in programming began little
           over a year ago when I began learning to code in C/C++. I took a

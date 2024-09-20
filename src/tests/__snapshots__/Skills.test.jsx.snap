@@ -1,0 +1,26 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Navbar > renders the Nav component and matches snapshot 1`] = `
+"<div class="MuiListItemIcon-root css-cveggr-MuiListItemIcon-root" style="min-width: auto; margin-right: 8px;">•</div>
+<div class="MuiListItemText-root css-1y2w5y4-MuiListItemText-root"><span class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-1edfpdg-MuiTypography-root">JavaScript</span></div>"
+`;
+
+exports[`Skills Item > renders the  component and matches snapshot 1`] = `
+"<div class="MuiListItemIcon-root css-cveggr-MuiListItemIcon-root" style="min-width: auto; margin-right: 8px;">•</div>
+<div class="MuiListItemText-root css-1y2w5y4-MuiListItemText-root"><span class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-1edfpdg-MuiTypography-root">JavaScript</span></div>"
+`;
+
+exports[`Skills Item > renders the Nav component and matches snapshot 1`] = `
+"<div class="MuiListItemIcon-root css-cveggr-MuiListItemIcon-root" style="min-width: auto; margin-right: 8px;">•</div>
+<div class="MuiListItemText-root css-1y2w5y4-MuiListItemText-root"><span class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-1edfpdg-MuiTypography-root">JavaScript</span></div>"
+`;
+
+exports[`Skills Item > renders the skills item component and matches snapshot 1`] = `
+"<div class="MuiListItemIcon-root css-cveggr-MuiListItemIcon-root" style="min-width: auto; margin-right: 8px;">•</div>
+<div class="MuiListItemText-root css-1y2w5y4-MuiListItemText-root"><span class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-1edfpdg-MuiTypography-root">JavaScript</span></div>"
+`;
+
+exports[`renders the Nav component and matches snapshot 1`] = `
+"<div class="MuiListItemIcon-root css-cveggr-MuiListItemIcon-root" style="min-width: auto; margin-right: 8px;">•</div>
+<div class="MuiListItemText-root css-1y2w5y4-MuiListItemText-root"><span class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-1edfpdg-MuiTypography-root">JavaScript</span></div>"
+`;

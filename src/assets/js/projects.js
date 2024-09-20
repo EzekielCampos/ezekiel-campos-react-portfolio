@@ -1,7 +1,9 @@
+// Images of the projects
 import blog from "../img/tech-blog-main.png";
 import listIt from "../img/list-it-home-pg.png";
 import bonAppetit from "../img/bon-appetit-page.png";
 
+// Project data tha will be used for ProjectCard components
 export const projectData = [
   {
     id: 1,
@@ -67,5 +69,19 @@ export const projectData = [
     deployed:
       "https://ezekielcampos.github.io/bon-appetit-food-cocktail-recipe-search-application/",
   },
-  
+];
+
+// This data will be used for the test
+export const testData = [
+  {
+    id: 1,
+    name: "Social Network API Using Mongoose",
+    description:
+      "This project focuses on creating an API for a social networking web application. The backend was built with MongoDB in association with Mongoose for creating models and organizing data.This assignment was meant to create a functioning backend using Mongoose where users can create a friend’s list, and sharing and reacting to other user’s thoughts.",
+    video:
+      "https://drive.google.com/file/d/1sNV5Q-qAhhKLSudDqTvVZynQIrGg76K6/preview",
+    deployed:
+      "https://drive.google.com/file/d/1sNV5Q-qAhhKLSudDqTvVZynQIrGg76K6/preview",
+    github: "https://github.com/EzekielCampos/social-network-mongo-api",
+  },
 ];
