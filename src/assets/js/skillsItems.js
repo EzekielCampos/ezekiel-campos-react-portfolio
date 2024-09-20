@@ -18,17 +18,57 @@ export const skills = [
   {
     id: 4,
 
-    tech: "Express.js",
+    tech: "SQL",
   },
 
   {
     id: 5,
+
+    tech: "NOSQL",
+  },
+  {
+    id: 6,
 
     tech: "MongoDB",
   },
   {
     id: 6,
 
-    tech: "Mongoose",
+    tech: "PostgresSQL",
   },
+
 ];
+
+export const libraries = [
+
+{
+  id:1,
+  tech:"Mongoose"
+},
+{
+  id:2,
+  tech:"Material UI"
+},
+{
+  id:3,
+  tech:"Express.js"
+},
+{
+  id:4,
+  tech:"Vite",
+},
+{
+  id:5,
+  tech:"Boostrap"
+},
+{
+  id:6,
+  tech:"Sequelize"
+},
+{
+  id: 7,
+
+  tech: "Express-Session",
+},
+
+]
