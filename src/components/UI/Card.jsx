@@ -18,11 +18,27 @@ export const ProjectCard = ({ data }) => {
     return (
       <Grid size={{ xs: 12, md: 6, s: 4 }} key={data.id}>
         <Card sx={{ display: "flex", flexDirection: "column", height: "100%" }}>
-          <CardMedia
+          {/* <CardMedia
             sx={{ height: 400, objectFit: "cover" }}
             image={data.pic}
             title={data.name}
-          />
+          /> */}
+          <CardMedia sx={{ height: 400 }}>
+            {data.video ? (
+              <iframe
+                src= {data.video}
+                width="100%"
+                height="100%"
+                allow="autoplay"
+              ></iframe>
+            ) : (
+              <img
+                style={{ height: "100%", width: "100%", objectFit: "cover" }}
+                src={data.pic}
+                alt={data.name}
+              />
+            )}
+          </CardMedia>
 
           {/* Card Content */}
           <CardContent>
@@ -51,7 +67,7 @@ export const ProjectCard = ({ data }) => {
             {/* Deployed Page Icon */}
             <IconButton
               sx={{ color: "#000" }}
-              //   onClick={() => window.open(deployedUrl, "_blank")}
+              onClick={() => window.open(data.deployed)}
             >
               <LanguageIcon style={{ width: 35, height: 35 }} />
             </IconButton>

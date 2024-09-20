@@ -27,7 +27,7 @@ export const Resume = () => {
             Resume
           </Typography>
         </Grid>
-        <Grid size={12}>
+        <Grid size={12} sx={{paddingBottom:"40px"}}>
           <Typography textAlign="center" variant="body1">
             Download my{" "}
             <Link
@@ -52,7 +52,7 @@ export const Resume = () => {
 
         }}
       >
-        <Grid size={6} sx={{ border: "1px black dotted" }}>
+        <Grid size={6} sx={{ border: "1px black dotted", paddingLeft:"10px"}}>
           <Typography variant="h5">Proficiencies:</Typography>
 
           <List>
