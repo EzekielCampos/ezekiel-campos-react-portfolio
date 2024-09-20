@@ -30,6 +30,12 @@ In order to install this project ensure that Node is installed.  Either fork thi
 
 In order to run the server enter the command “npm run dev”.  If you are successful it will redirect to the local host and whatever port that was specified.  If you are about to deploy the page ensure that you bundle the code by running the command “npm run build” which ensures your code is optimized and bundled efficiently when you’re ready to deploy
 
+### Deployed Link
+https://effervescent-rolypoly-967bba.netlify.app/
+
+### Screenshot
+![alt](./src/assets/img/home-pg.png)
+
 
 
 ## License
