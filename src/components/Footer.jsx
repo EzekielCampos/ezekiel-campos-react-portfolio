@@ -60,7 +60,7 @@ export const Footer = () => {
       // left: 0,
       width: '100%',
       background: 'linear-gradient(90deg, #f5f7fa, #c3cfe2)',
-      padding: '8px',
+      padding: '12px',
       boxShadow: '0 -1px 4px rgba(0,0,0,0.2)',
     }}
   >

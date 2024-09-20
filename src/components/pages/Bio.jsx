@@ -1,5 +1,5 @@
 import { Grid2 as Grid, Typography, Avatar } from "@mui/material";
-import portrait from "../assets/img/profile.jpg";
+import portrait from "../../assets/img/profile.jpg";
 
 export const Bio = () => {
   return (
@@ -10,9 +10,10 @@ export const Bio = () => {
       alignItems="center"
       spacing={2}
       sx={{
-        minHeight: "100vh",
+        minHeight: "750px",
         paddingTop: "50px", // Padding around content
         paddingBottom: "175px", // Adjust this value to ensure there's space for the footer
+        background:"#B7B7B7"
       }}
     >
       <Grid
