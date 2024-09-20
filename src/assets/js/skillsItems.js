@@ -31,7 +31,7 @@ export const skills = [
     tech: "MongoDB",
   },
   {
-    id: 6,
+    id: 7,
 
     tech: "PostgresSQL",
   },
