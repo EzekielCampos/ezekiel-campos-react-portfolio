@@ -4,11 +4,11 @@ export const Skills = ({ data }) => {
     console.log(data);
   return data.map((item) => {
     return (
-      <ListItem key={item.id}>
+      <ListItem className="skill" key={item.id}>
         <ListItemIcon style={{ minWidth: "auto", marginRight: "8px" }}>
           •
         </ListItemIcon>
-        <ListItemText>{item.tech}</ListItemText>
+        <ListItemText >{item.tech}</ListItemText>
       </ListItem>
     );
   });

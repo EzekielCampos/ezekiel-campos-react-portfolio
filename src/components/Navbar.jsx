@@ -25,6 +25,7 @@ export const Nav = () => {
 
   return (
     <Grid
+    className="nav"
       container
       style={{
         width: "100%",
@@ -72,7 +73,6 @@ export const Nav = () => {
               value="resume"
               label="Resume"
               sx={{ minWidth: 80, padding: "6px 12px", fontSize: ".850rem" }} // Adjust the size
-              // onClick={()=>{console.log("Resume")}}
             />
           </Tabs>
         </Grid>

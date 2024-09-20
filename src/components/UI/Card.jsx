@@ -16,7 +16,7 @@ export const ProjectCard = ({ data }) => {
 
   return data.map((data) => {
     return (
-      <Grid size={{ xs: 12, md: 6, s: 4 }} key={data.id}>
+      <Grid className ="card" size={{ xs: 12, md: 6, s: 4 }} key={data.id}>
         <Card sx={{ display: "flex", flexDirection: "column", height: "100%" }}>
           {/* <CardMedia
             sx={{ height: 400, objectFit: "cover" }}
