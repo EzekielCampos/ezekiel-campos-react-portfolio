@@ -13,7 +13,7 @@ export const Resume = () => {
       sx={{
         paddingTop: "50px",
         paddingBottom: "100px",
-        background: "#B7B7B7",
+        background: "#CED3DC",
       }}
     >
       <Grid

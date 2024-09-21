@@ -16,7 +16,7 @@ export const Projects = () => {
         minHeight: "50vh",
         paddingTop: "50px", // Padding around content
         paddingBottom: "100px", // Adjust this value to ensure there's space for the footer
-        background: "#B7B7B7",
+        background:"#CED3DC",
         paddingLeft: "20px",
         paddingRight: "20px",
       }}

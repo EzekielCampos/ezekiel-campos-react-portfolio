@@ -75,7 +75,7 @@ export const Contact = () => {
             sx={{
               paddingTop: "50px",
               paddingBottom: "100px",
-              background: "#B7B7B7",
+              background: "#CED3DC",
             }}
           >
             {/* When the loading state is true then a backdroup pops up and 
