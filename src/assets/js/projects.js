@@ -2,9 +2,20 @@
 import blog from "../img/tech-blog-main.png";
 import listIt from "../img/list-it-home-pg.png";
 import bonAppetit from "../img/bon-appetit-page.png";
+import bookSearch from "../img/search-pg.png";
 
 // Project data tha will be used for ProjectCard components
 export const projectData = [
+  {
+    id: 1,
+    name: "Refactoring Application from RESTful API to GraphQL",
+    description:
+      "This purpose of this project was to refactor an existing application built with a RESTful API and instead implement a GraphQL API. The application is a full stack website that allows users to create an account and search for books to save to their account. Apollo Server was used alongside GraphQL to handle the request to the database. The front- end uses React together with Apollo Client to make those GraphQL request for specific data.",
+    pic: bookSearch,
+    deployed:
+      "https://refactor-book-search-app-to-grapql.onrender.com/",
+    github: "https://github.com/EzekielCampos/refactor-book-search-app-to-grapql",
+  },
   {
     id: 1,
     name: "Social Network API Using Mongoose",
