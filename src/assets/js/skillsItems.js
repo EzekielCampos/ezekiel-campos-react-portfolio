@@ -58,7 +58,7 @@ export const libraries = [
   },
   {
     id: 5,
-    tech: "Boostrap",
+    tech: "Redux Toolkit",
   },
   {
     id: 6,
