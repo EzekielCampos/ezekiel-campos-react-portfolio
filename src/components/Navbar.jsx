@@ -18,7 +18,7 @@ export const Nav = () => {
   const routes = {
     one: "/",
     two: "/projects",
-    three: "/contact-info",
+    // three: "/contact-info",
     four: "/resume",
   };
 
@@ -45,7 +45,7 @@ export const Nav = () => {
       }}
     >
       <Grid container size={12} alignItems={"center"} marginRight={"15px"}>
-        <Grid size={{ xs: 6, md: 8, sm: 7 }}>
+        <Grid size={{ xs: 6, md: 9, sm: 7 }}>
           {/* This will hold the name in the navbar at the far left */}
           <h2
             style={{
@@ -56,7 +56,7 @@ export const Nav = () => {
             Ezekiel Campos
           </h2>
         </Grid>
-        <Grid size={{ md: 4, xs: 6, sm: 5 }}>
+        <Grid size={{ md: 3, xs: 6, sm: 5 }}>
           {/* Tabs is a Material UI component that will help with the 
           routing of the different endpoints */}
           <Tabs
@@ -83,13 +83,13 @@ export const Nav = () => {
               label="My Projects"
               sx={{ minWidth: 80, padding: "6px 12px", fontSize: ".850rem" }} // Adjust the size
             />
-            <Tab
+            {/* <Tab
               // When the user selects this value this is what will save to the state
               // and indicate which route to send to use
               value="three"
               label="Contact Me"
               sx={{ minWidth: 80, padding: "6px 12px", fontSize: ".850rem" }} // Adjust the size
-            />
+            /> */}
 
             <Tab
               // When the user selects this value this is what will save to the state

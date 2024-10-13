@@ -5,7 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 // These are all the components that will be used for the different pages for routing
 import { Bio } from "./components/pages/Bio.jsx";
-import { Contact } from "./components/pages/ContactMe.jsx";
+// import { Contact } from "./components/pages/ContactMe.jsx";
 import { Projects } from "./components/pages/Projects.jsx";
 import { Resume } from "./components/pages/Resume.jsx";
 
@@ -23,10 +23,10 @@ const router = createBrowserRouter([
         path: "/projects",
         element: <Projects />,
       },
-      {
-        path:"/contact-info",
-        element:<Contact/>
-      },
+      // {
+      //   path:"/contact-info",
+      //   element:<Contact/>
+      // },
       {
         path:"/resume",
         element:<Resume/>

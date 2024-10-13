@@ -13,7 +13,7 @@ export const Bio = () => {
         minHeight: "750px",
         paddingTop: "50px", // Padding around content
         paddingBottom: "175px", // Adjust this value to ensure there's space for the footer
-        background:"#CED3DC"
+        background: "#CED3DC",
       }}
     >
       <Grid
@@ -55,17 +55,17 @@ export const Bio = () => {
         {/* Short summary of developer */}
         <Typography variant="body1">
           Welcome to my portfolio page! My journey in programming began little
-          over a year ago when I began learning to code in C/C++. I took a
-          certficate course through UCSD extension and immediately fell in love
-          with it. I was so fascinated about the capabilities that one could do
-          with coding that I was eager to learn more! I wanted learn more to feed my passion
-          for software development. I am currently attending a coding bootcamp
-          through UC Berkeley Extension to improve my skills to be competitive
-          and land a position as a full stack developer. My goal is to find an
-          entry level position as software engineer, and to find a company that
-          wants to invest in me so that I can continue to build on my skills as
-          a programmer and a leader. Take a look at some of my work in the projects tab, and
-          if you would like to connect wtih me visit the Contact Me page to leave me a mesage.
+          over a two years ago when I began learning to code in C/C++. I took a
+          certficate course through UCSD and had so much fun learning how code
+          that I was eager for more! I wanted to continue feed my passion for
+          software development. I just recently completed a coding bootcamp
+          through UC Berkeley Extension. The program help improve my skills to
+          be competitive and land a position as a full stack developer. My goal
+          is to find an internship or entry level position. I'm looking to find a
+          company that wants to invest in me so that I can continue to build on
+          my skills as a programmer and a leader. Take a look at some of my work
+          in the projects tab, and if you would like to connect wtih find me on
+          LinkedIn the link is in the footer below.
         </Typography>
       </Grid>
     </Grid>
