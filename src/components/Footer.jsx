@@ -11,7 +11,7 @@ export const Footer = () => {
     window.location.href = "https://github.com/EzekielCampos";
   };
   const handleLinkedinClick = () => {
-    window.location.href = "https://www.linkedin.com/";
+    window.location.href = "https://www.linkedin.com/in/ezekiel-campos-170b11332/";
   };
 
   return (
