@@ -52,7 +52,7 @@ export const Resume = () => {
         }}
       >
         {/* Below the title and download is a list of Proficiencies and Libraries */}
-        <Grid size={6} sx={{ border: "1px black dotted", paddingLeft: "10px" }}>
+        <Grid size={{md:6, xs:12}} sx={{ border: "1px black dotted", paddingLeft: "10px" }}>
           <Typography variant="h5">Proficiencies:</Typography>
 
           <List>
@@ -60,7 +60,7 @@ export const Resume = () => {
             <Skills data={skills} />
           </List>
         </Grid>
-        <Grid size={6} sx={{ border: "1px black dotted", paddingLeft: "10px" }}>
+        <Grid size={{md:6, xs:12}} sx={{ border: "1px black dotted", paddingLeft: "10px" }}>
           <Typography variant="h5">Libraries:</Typography>
 
           <List>
