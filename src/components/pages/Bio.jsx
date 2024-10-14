@@ -17,20 +17,25 @@ export const Bio = () => {
       }}
     >
       <Grid
-        size={{ xs: 12, md: 5 }}
+        container
+        xs={12}
+        md={5}
         display="flex"
         justifyContent="center"
-        alignItems={"center"}
+        alignItems="center"
       >
-        {/* The Avatar component is where the image is placed in a portrait like 
-        setting */}
         <Avatar
           alt="Ezekiel Campos"
           src={portrait}
-          sx={{ width: 400, height: 400 }}
+          sx={{
+            width: { xs: 200, sm: 250, md: 350, lg: 400 }, // Responsive sizes for different screen widths
+            height: { xs: 200, sm: 250, md: 350, lg: 400 },
+          }}
         />
       </Grid>
+
       <Grid
+      alignContent={"center"}
         size={{ xs: 12, md: 7 }}
         sx={{ paddingRight: "20px", paddingLeft: "20px" }}
       >
@@ -60,12 +65,12 @@ export const Bio = () => {
           that I was eager for more! I wanted to continue feed my passion for
           software development. I just recently completed a coding bootcamp
           through UC Berkeley Extension. The program help improve my skills to
-          be competitive and land a position as a full stack developer. My goal
-          is to find an internship or entry level position. I'm looking to find a
-          company that wants to invest in me so that I can continue to build on
-          my skills as a programmer and a leader. Take a look at some of my work
-          in the projects tab, and if you would like to connect wtih find me on
-          LinkedIn the link is in the footer below.
+          be competitive to land a position as a full stack developer. My goal
+          is to find an internship or entry level position. I'm looking to find
+          a company that wants to invest in me so that I can continue to build
+          on my skills as a programmer and a leader. Take a look at some of my
+          work in the projects tab, and if you would like to connect wtih find
+          me on LinkedIn the link is in the footer below.
         </Typography>
       </Grid>
     </Grid>
