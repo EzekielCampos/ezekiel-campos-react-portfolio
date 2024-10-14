@@ -12,7 +12,7 @@ export const Bio = () => {
       sx={{
         minHeight: "750px",
         paddingTop: "50px", // Padding around content
-        paddingBottom: "175px", // Adjust this value to ensure there's space for the footer
+        paddingBottom: "75px", // Adjust this value to ensure there's space for the footer
         background: "#CED3DC",
       }}
     >
@@ -68,30 +68,22 @@ export const Bio = () => {
             Full-Stack Developer
           </Typography>
         </Grid>
-        <Grid
-          sx={{
-            paddingRight: "20px",
-            paddingLeft: "20px",
-            textAlign: { xs: "center", md: "center" }, // Center text on small screens
-          }}
-        >
-          {/* Short summary of developer */}
-          <Typography variant="body1">
-            Welcome to my portfolio page! My journey in programming began little
-            over a two years ago when I began learning to code in C/C++. I took
-            a certficate course through UCSD and had so much fun learning how
-            code that I was eager for more! I wanted to continue feed my passion
-            for software development. I just recently completed a coding
-            bootcamp through UC Berkeley Extension. The program help improve my
-            skills to be competitive to land a position as a full stack
-            developer. My goal is to find an internship or entry level position.
-            I'm looking to find a company that wants to invest in me so that I
-            can continue to build on my skills as a programmer and a leader.
-            Take a look at some of my work in the projects tab, and if you would
-            like to connect wtih find me on LinkedIn the link is in the footer
-            below.
-          </Typography>
-        </Grid>
+
+        {/* Short summary of developer */}
+        <Typography variant="body1">
+          Welcome to my portfolio page! My journey in programming began little
+          over a two years ago when I began learning to code in C/C++. I took a
+          certficate course through UCSD and had so much fun learning how code
+          that I was eager for more! I wanted to continue feed my passion for
+          software development. I just recently completed a coding bootcamp
+          through UC Berkeley Extension. The program help improve my skills to
+          be competitive to land a position as a full stack developer. My goal
+          is to find an internship or entry level position. I'm looking to find
+          a company that wants to invest in me so that I can continue to build
+          on my skills as a programmer and a leader. Take a look at some of my
+          work in the projects tab, and if you would like to connect wtih find
+          me on LinkedIn the link is in the footer below.
+        </Typography>
       </Grid>
     </Grid>
   );
