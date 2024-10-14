@@ -39,14 +39,26 @@ export const Bio = () => {
         sx={{ paddingRight: "20px", paddingLeft: "20px" }}
       >
         {/* The bio text will be placed next to the image */}
-        <Grid display="flex" justifyContent="center" alignContent={"center"}>
+        <Grid
+          sx={{
+            paddingRight: "20px",
+            paddingLeft: "20px",
+            textAlign: { xs: "center", md: "center" }, // Center text on small screens
+          }}
+        >
           {/* Name header */}
           <Typography variant="h3" component="h1" gutterBottom>
             Ezekiel Campos
           </Typography>
         </Grid>
         {/* Positon subheader */}
-        <Grid display="flex" justifyContent="center">
+        <Grid
+          sx={{
+            paddingRight: "20px",
+            paddingLeft: "20px",
+            textAlign: { xs: "center", md: "center" }, // Center text on small screens
+          }}
+        >
           <Typography
             variant="h6"
             component="h2"
@@ -56,7 +68,13 @@ export const Bio = () => {
             Full-Stack Developer
           </Typography>
         </Grid>
-        <Grid display="flex" justifyContent="center">
+        <Grid
+          sx={{
+            paddingRight: "20px",
+            paddingLeft: "20px",
+            textAlign: { xs: "center", md: "center" }, // Center text on small screens
+          }}
+        >
           {/* Short summary of developer */}
           <Typography variant="body1">
             Welcome to my portfolio page! My journey in programming began little
